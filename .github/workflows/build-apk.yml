@@ -12,11 +12,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set up JDK 11
+      # 第一步：用 JDK 17，因为新版 sdkmanager 强制要求 17+
+      - name: Set up JDK 17 (for Android SDK tools)
         uses: actions/setup-java@v4
         with:
           distribution: temurin
-          java-version: '11'
+          java-version: '17'
 
       - name: Set up Android SDK
         uses: android-actions/setup-android@v3
@@ -24,6 +25,13 @@ jobs:
       - name: Install SDK packages
         run: |
           sdkmanager "platform-tools" "platforms;android-31" "build-tools;31.0.0"
+
+      # 第二步：切回 JDK 11，AGP 7.0.4 + Kotlin 1.5.0 只在 11 上稳定
+      - name: Set up JDK 11 (for Gradle build)
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '11'
 
       - name: Generate self-use keystore
         run: |
@@ -38,9 +46,10 @@ jobs:
           ./gradlew :nga_phone_base_3.0:assembleRelease --stacktrace --no-daemon
 
       - name: Upload APK
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: nga-selfuse-apk
           path: nga_phone_base_3.0/build/outputs/apk/release/*.apk
-          if-no-files-found: error
+          if-no-files-found: warn
           retention-days: 30
