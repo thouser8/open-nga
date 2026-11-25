@@ -20,6 +20,7 @@ import gov.anzong.androidnga.base.util.ToastUtils;
 import gov.anzong.androidnga.common.PreferenceKey;
 import gov.anzong.androidnga.common.util.ReflectUtils;
 import gov.anzong.androidnga.db.AppDatabase;
+import gov.anzong.androidnga.util.GlobalFontInjector;
 import sp.phone.common.FilterKeywordsManagerImpl;
 import sp.phone.common.NoteManangerImpl;
 import sp.phone.common.UserManagerImpl;
@@ -36,6 +37,8 @@ public class NgaClientApp extends Application {
     public void onCreate() {
         initLogger();
         ContextUtils.setApplication(this);
+        // 自用改造：全局内置字体
+        GlobalFontInjector.install(this);
         PreferenceUtils.transfer(this);
         checkNewVersion();
         VersionUpgradeHelper.upgrade();
