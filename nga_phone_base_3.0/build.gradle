@@ -44,6 +44,15 @@ android {
         enabled true
     }
 
+    signingConfigs {
+        selfuse {
+            storeFile file("$rootDir/selfuse.jks")
+            storePassword "123456"
+            keyAlias "selfuse"
+            keyPassword "123456"
+        }
+    }
+
     buildTypes {
         release {
             debuggable false
@@ -52,6 +61,10 @@ android {
             pseudoLocalesEnabled false
             minifyEnabled false
             zipAlignEnabled true
+            // 自用改造：仓库根目录存在 selfuse.jks 时自动签名，否则产出未签名 APK
+            if (file("$rootDir/selfuse.jks").exists()) {
+                signingConfig signingConfigs.selfuse
+            }
         }
         debug {
             applicationIdSuffix '.debug'

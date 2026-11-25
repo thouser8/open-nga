@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    全局自定义字体覆盖层（自用改造）
+    原理：把主题里的 android:textViewStyle / android:editTextStyle / android:buttonStyle
+    指向下面这几个 style，系统在创建每一个 TextView / EditText / Button 时都会走这个默认样式，
+    于是整个 App（含帖子里程序化生成的 TextView）都会用上内置字体。
+-->
+<resources>
+
+    <!-- TextView 默认样式（继承 AppCompat 原样，仅加字体） -->
+    <style name="AppFont.TextView" parent="Widget.AppCompat.TextView">
+        <item name="android:fontFamily">@font/honorsans_bold</item>
+    </style>
+
+    <!-- EditText 默认样式 -->
+    <style name="AppFont.EditText" parent="Widget.AppCompat.EditText">
+        <item name="android:fontFamily">@font/honorsans_bold</item>
+    </style>
+
+    <!-- Button 默认样式 -->
+    <style name="AppFont.Button" parent="Widget.AppCompat.Button">
+        <item name="android:fontFamily">@font/honorsans_bold</item>
+    </style>
+
+    <!-- 小号 Button（部分控件走这个） -->
+    <style name="AppFont.Button.Small" parent="Widget.AppCompat.Button.Small">
+        <item name="android:fontFamily">@font/honorsans_bold</item>
+    </style>
+
+    <!-- 带边框 Button -->
+    <style name="AppFont.Button.Borderless" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:fontFamily">@font/honorsans_bold</item>
+    </style>
+
+    <!-- Toolbar 标题 / 副标题（ActionBar 文字不走 textViewStyle，必须单独指定） -->
+    <style name="AppFont.ToolbarTitle" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:fontFamily">@font/honorsans_bold</item>
+    </style>
+
+    <style name="AppFont.ToolbarSubtitle" parent="TextAppearance.Widget.AppCompat.Toolbar.Subtitle">
+        <item name="android:fontFamily">@font/honorsans_bold</item>
+    </style>
+
+</resources>

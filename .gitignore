@@ -12,3 +12,6 @@ gradle.properties
 *.apk
 projectFilesBackup/
 nga_phone_base_3.0/release/
+
+# 自用签名文件（由 CI 生成，不提交）
+selfuse.jks

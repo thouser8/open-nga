@@ -9,6 +9,13 @@
         <item name="android:textColor">@color/text_color_selector</item>
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowBackground">@color/window_background</item>
+        <!-- 自用改造：全局内置字体 -->
+        <item name="android:fontFamily">@font/honorsans_bold</item>
+        <item name="android:textViewStyle">@style/AppFont.TextView</item>
+        <item name="android:editTextStyle">@style/AppFont.EditText</item>
+        <item name="android:buttonStyle">@style/AppFont.Button</item>
+        <item name="titleTextAppearance">@style/AppFont.ToolbarTitle</item>
+        <item name="subtitleTextAppearance">@style/AppFont.ToolbarSubtitle</item>
     </style>
 
 
@@ -54,6 +61,13 @@
         <item name="mal_toolbarPopupTheme">@style/Theme.Mal.Toolbar.Light</item>
         <item name="mal_color_primary">@color/material_title_color</item>
         <item name="mal_color_secondary">@color/material_sub_title_color</item>
+        <!-- 自用改造：全局内置字体 -->
+        <item name="android:fontFamily">@font/honorsans_bold</item>
+        <item name="android:textViewStyle">@style/AppFont.TextView</item>
+        <item name="android:editTextStyle">@style/AppFont.EditText</item>
+        <item name="android:buttonStyle">@style/AppFont.Button</item>
+        <item name="titleTextAppearance">@style/AppFont.ToolbarTitle</item>
+        <item name="subtitleTextAppearance">@style/AppFont.ToolbarSubtitle</item>
     </style>
 
     <style name="Theme.AboutActivity.Green" parent="Theme.AboutActivity">

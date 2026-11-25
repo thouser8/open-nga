@@ -17,10 +17,24 @@
 
     <style name="AppTheme" parent="@style/Theme.AppCompat">
         <item name="android:actionOverflowButtonStyle">@style/OverFlow</item>
+        <!-- 自用改造：全局内置字体 -->
+        <item name="android:fontFamily">@font/honorsans_bold</item>
+        <item name="android:textViewStyle">@style/AppFont.TextView</item>
+        <item name="android:editTextStyle">@style/AppFont.EditText</item>
+        <item name="android:buttonStyle">@style/AppFont.Button</item>
+        <item name="titleTextAppearance">@style/AppFont.ToolbarTitle</item>
+        <item name="subtitleTextAppearance">@style/AppFont.ToolbarSubtitle</item>
     </style>
 
     <style name="AppThemeNight" parent="@style/Theme.AppCompat">
         <item name="android:actionOverflowButtonStyle">@style/OverFlow</item>
+        <!-- 自用改造：全局内置字体 -->
+        <item name="android:fontFamily">@font/honorsans_bold</item>
+        <item name="android:textViewStyle">@style/AppFont.TextView</item>
+        <item name="android:editTextStyle">@style/AppFont.EditText</item>
+        <item name="android:buttonStyle">@style/AppFont.Button</item>
+        <item name="titleTextAppearance">@style/AppFont.ToolbarTitle</item>
+        <item name="subtitleTextAppearance">@style/AppFont.ToolbarSubtitle</item>
     </style>
 
     <style name="OverFlow" parent="@android:style/Widget.Holo.ActionButton.Overflow">
@@ -39,6 +53,8 @@
         <item name="android:background">@android:color/black</item>
         <item name="android:windowBackground">@null</item>
         <item name="android:backgroundDimEnabled">true</item>
+        <!-- 自用改造：全局内置字体 -->
+        <item name="android:fontFamily">@font/honorsans_bold</item>
     </style>
 
 </resources>
