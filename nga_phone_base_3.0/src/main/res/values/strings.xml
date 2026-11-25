@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">OPEN NGA</string>
+    <string name="app_name">OPEN NGA 改</string>
     <string name="menu_login">登录</string>
     <string name="menu_setting">设置</string>
     <string name="menu_exit">退出</string>
@@ -396,7 +396,7 @@
     <string name="label_activity_message_detail">短消息正文</string>
     <string name="label_activity_topic_history">浏览历史</string>
     <string name="label_activity_login">登录</string>
-    <string name="label_activity_main">OPEN NGA</string>
+    <string name="label_activity_main">OPEN NGA 改</string>
     <string name="title_about">关于</string>
 
     <!-- error -->

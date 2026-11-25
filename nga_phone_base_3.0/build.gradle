@@ -17,7 +17,7 @@ android {
     compileSdkVersion project.compileSdkVersion
     namespace 'gov.anzong.androidnga'
     defaultConfig {
-        applicationId "dev.mlzzen.androidnga"
+        applicationId "dev.mlzzen.androidnga.self"
         minSdkVersion project.minSdkVersion
         targetSdkVersion project.targetSdkVersion
         resConfigs "zh", "en"
